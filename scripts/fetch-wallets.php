@@ -1,9 +1,9 @@
 <?php
 // Database credentials (update before uploading to GoDaddy)
 $host = 'localhost';
-$db = 'youraccount_whale_radar';
-$user = 'youraccount_whale_user';
-$pass = 'YOUR_PASSWORD';
+$db = 'shizload';
+$user = 'DZ49';
+$pass = 'Tiremaster1992!';
 
 // Connect to MySQL
 $conn = new mysqli($host, $user, $pass, $db);
