@@ -1,0 +1,6 @@
+# Ignore sensitive config files
+scripts/config.php
+server/config.php
+# Ignore temporary files
+*.log
+.DS_Store
