@@ -1,0 +1,23 @@
+name: Deploy to GoDaddy
+on:
+    push:
+        branches: [main]
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: SamKirkland/FTP-Deploy-Action@v4.3.3
+              with:
+                  server: ${{ secrets.FTP_SERVER }}
+                  username: ${{ secrets.FTP_USERNAME }}
+                  password: ${{ secrets.FTP_PASSWORD }}
+                  local-dir: ./server/
+                  server-dir: /server/
+            - uses: SamKirkland/FTP-Deploy-Action@v4.3.3
+              with:
+                  server: ${{ secrets.FTP_SERVER }}
+                  username: ${{ secrets.FTP_USERNAME }}
+                  password: ${{ secrets.FTP_PASSWORD }}
+                  local-dir: ./scripts/
+                  server-dir: /home/username/scripts/
